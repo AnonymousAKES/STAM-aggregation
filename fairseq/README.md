@@ -53,7 +53,7 @@ python train.py     data-bin/wmt16_en_de_bpe32k     --arch transformer_vaswani_w
 
 We note that the '--fp16' option requires GPUs with Volta architecture.
 
-3. Inference. First average the last 5 checkpoints.
+3. Inference. Following [Scaling Neural Machine Translation](https://github.com/pytorch/fairseq/blob/v0.9.0/examples/scaling_nmt/README.md), We evluate the BLEU score on  newstest14 dataset. First average the last 5 checkpoints.
 
 ```
 python scripts/average_checkpoints \
