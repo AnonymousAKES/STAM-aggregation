@@ -127,14 +127,10 @@ if use_cuda and not resume:
     print('Using CUDA..')
     
 num_p = 0
-num_p_attn = 0
 for p in net.named_parameters():
-    if('att' not in p[0]):
-        num_p += p[1].numel()
-    else:
-        num_p_attn += p[1].numel()
-print('parameters expect attention: %.2f'%(num_p/(1000**2)), 'M')
-print('parameters attention: %.5f'%(num_p_attn/(1000**2)), 'M')
+    num_p += p[1].numel()
+
+print('# of parameters: %.2f'%(num_p/(1000**2)), 'M')
 
 
 nesterov = True
