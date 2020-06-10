@@ -51,7 +51,7 @@ python train.py     data-bin/wmt16_en_de_bpe32k     --arch transformer_vaswani_w
 --ddp-backend=no_c10d --no-progress-bar --keep-last-epochs 20 --save-dir checkpoints/wmt_heads${C}_headdim${d_h}_fcdim${d_fc}_modeldim${d}_alpha${alpha}
 ```
 
-We note that the '--fp16' option requires a GPU with Volta architecture.
+We note that the '--fp16' option requires GPUs with Volta architecture.
 
 3. Inference. First average the last 5 checkpoints.
 
