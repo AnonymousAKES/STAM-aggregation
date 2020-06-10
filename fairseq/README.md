@@ -46,7 +46,7 @@ alpha=0.471
 python train.py     data-bin/wmt16_en_de_bpe32k     --arch transformer_vaswani_wmt_en_de_big --share-all-embeddings  --warmup-init-lr 1e-07 \
 --optimizer adam --adam-betas '(0.9, 0.98)' --clip-norm 0.0   --lr 0.001000 --lr-scheduler inverse_sqrt --warmup-updates 4000 \
 --encoder-embed-dim ${d} --decoder-embed-dim ${d} --encoder-ffn-embed-dim ${d_fc}    --decoder-ffn-embed-dim ${d_fc} --fp16 \
---attn_type 0 -s en -t de --dropout 0.3 --head_dropout 0.1 --attention-dropout 0.1 --relu-dropout 0.1 --weight-decay 0.    --criterion label_smoothed_cross_entropy --label-smoothing 0.1    --max-tokens 4096 --update-freq 4  --fp16  \
+ -s en -t de --dropout 0.3 --head_dropout 0.1 --attention-dropout 0.1 --relu-dropout 0.1 --weight-decay 0.    --criterion label_smoothed_cross_entropy --label-smoothing 0.1    --max-tokens 4096 --update-freq 4  --fp16  \
 --encoder-attention-heads ${C} --decoder-attention-heads ${C} --attn_head_dim ${d_h}     --alpha ${alpha} --fc_alpha ${alpha}  \ 
 --ddp-backend=no_c10d --no-progress-bar --keep-last-epochs 20 --save-dir checkpoints/wmt_heads${C}_headdim${d_h}_fcdim${d_fc}_modeldim${d}_alpha${alpha}
 ```
