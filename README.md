@@ -1,5 +1,5 @@
 # STAM-aggregation
-  Code for Neurips2020 submission "On the Aggregation of Multi-branch Network".
+## Code for Neurips2020 submission "On the Aggregation of Multi-branch Network".
   
   The codes are tested with [torch 1.5](https://pytorch.org/) and [fairseq 0.9.0](https://github.com/pytorch/fairseq/tree/v0.9.0).
   
