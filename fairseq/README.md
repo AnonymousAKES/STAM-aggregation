@@ -12,12 +12,12 @@ d_fc=4096
 d=256
 alpha=0.35
 
-CUDA_VISIBLE_DEVICES=0 python train.py     data-bin/iwslt14.tokenized.de-en     --arch transformer_iwslt_de_en 
---optimizer adam --adam-betas '(0.9, 0.98)' --clip-norm 0.0     --lr 1e-3 --lr-scheduler inverse_sqrt  --warmup-updates 4000 
---dropout 0.3 --weight-decay 0.0001 --attention-dropout 0.3 --relu-dropout 0.3 --head_dropout 0.3 --no-epoch-checkpoints   
---criterion label_smoothed_cross_entropy --label-smoothing 0.1 --share-all-embeddings --max-tokens 4096 
---encoder-attention-heads ${C} --decoder-attention-heads ${C} --encoder-embed-dim ${d} --decoder-embed-dim ${d} 
---alpha ${alpha} --fc_alpha ${alpha} --encoder-ffn-embed-dim ${d_fc} --decoder-ffn-embed-dim ${d_fc}  --attn_head_dim ${d_h}  --no-progress-bar 
+CUDA_VISIBLE_DEVICES=0 python train.py     data-bin/iwslt14.tokenized.de-en     --arch transformer_iwslt_de_en\
+--optimizer adam --adam-betas '(0.9, 0.98)' --clip-norm 0.0     --lr 1e-3 --lr-scheduler inverse_sqrt  --warmup-updates 4000\
+--dropout 0.3 --weight-decay 0.0001 --attention-dropout 0.3 --relu-dropout 0.3 --head_dropout 0.3 --no-epoch-checkpoints\
+--criterion label_smoothed_cross_entropy --label-smoothing 0.1 --share-all-embeddings --max-tokens 4096\
+--encoder-attention-heads ${C} --decoder-attention-heads ${C} --encoder-embed-dim ${d} --decoder-embed-dim ${d}\
+--alpha ${alpha} --fc_alpha ${alpha} --encoder-ffn-embed-dim ${d_fc} --decoder-ffn-embed-dim ${d_fc}  --attn_head_dim ${d_h}  --no-progress-bar\
 --save-dir heads${C}_headdim${d_h}_fcdim${d_fc}_modeldim${d}_alpha${alpha}
 ```
 
