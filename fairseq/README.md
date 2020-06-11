@@ -55,7 +55,7 @@ We note that the '--fp16' option requires GPUs with Volta architecture.
 
 3. Inference. 
 
-### Following [Scaling Neural Machine Translation](https://github.com/pytorch/fairseq/blob/v0.9.0/examples/scaling_nmt/README.md), we use newstest13 for validation and newstest14 for testing (the title of Table 3 in main text   'on WMT16 test sets'   is a typo). 
+##### Following [Scaling Neural Machine Translation](https://github.com/pytorch/fairseq/blob/v0.9.0/examples/scaling_nmt/README.md), we use newstest13 for validation and newstest14 for testing (the title of Table 3 in main text   'on WMT16 test sets'   is a typo). 
 
 
 First average the last 5 checkpoints.
